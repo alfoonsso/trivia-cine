@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineTrivia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- PANTALLA: Inicio -->
+  <div id="screen-home" class="screen active">
+    <div class="home-inner">
+      <div class="film-strip" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <h1 class="logo">CINE<span>TRIVIA</span></h1>
+      <p class="tagline">¿Cuánto sabes de cine?</p>
+
+      <div class="home-form">
+        <label for="player-name">Tu nombre</label>
+        <input type="text" id="player-name" placeholder="Escribe tu nombre..." maxlength="20" autocomplete="off" />
+
+        <label for="num-questions">Preguntas por partida</label>
+        <div class="pill-group" id="num-questions">
+          <button class="pill active" data-value="10">10</button>
+          <button class="pill" data-value="20">20</button>
+          <!--<button class="pill" data-value="40">40</button>-->
+        </div>
+
+        <button id="btn-start" class="btn-primary" disabled>Empezar partida</button>
+        <button id="btn-ranking" class="btn-secondary">Ver ranking</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANTALLA: Juego -->
+  <div id="screen-game" class="screen">
+    <header class="game-header">
+      <span id="progress-text">Pregunta 1 de 20</span>
+      <div class="score-badge">
+        <span id="score-live">0 pts</span>
+      </div>
+    </header>
+
+    <div class="progress-bar-wrap">
+      <div id="progress-bar" class="progress-bar"></div>
+    </div>
+
+    <div class="question-card">
+      <div class="category-tag" id="q-category"></div>
+      <h2 id="q-text"></h2>
+    </div>
+
+    <div id="options-grid" class="options-grid"></div>
+
+    <div id="feedback-bar" class="feedback-bar hidden">
+      <span id="feedback-icon"></span>
+      <span id="feedback-text"></span>
+      <button id="btn-next" class="btn-next">Siguiente →</button>
+    </div>
+  </div>
+
+  <!-- PANTALLA: Resultados -->
+  <div id="screen-results" class="screen">
+    <div class="results-inner">
+      <div class="trophy" id="trophy-emoji" aria-hidden="true">🎬</div>
+      <h2 id="result-title">¡Partida terminada!</h2>
+      <p id="result-player-name"></p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Puntuación</div>
+          <div class="stat-value" id="res-score">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Aciertos</div>
+          <div class="stat-value" id="res-correct">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Fallos</div>
+          <div class="stat-value" id="res-wrong">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">% Acierto</div>
+          <div class="stat-value" id="res-pct">0%</div>
+        </div>
+      </div>
+
+      <div class="saving-msg" id="saving-msg">Guardando resultado...</div>
+
+      <div class="results-actions">
+        <button id="btn-play-again" class="btn-primary">Jugar de nuevo</button>
+        <button id="btn-see-ranking" class="btn-secondary">Ver ranking</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANTALLA: Ranking -->
+  <div id="screen-ranking" class="screen">
+    <div class="ranking-inner">
+      <button id="btn-back" class="btn-back">← Volver</button>
+      <h2 class="ranking-title">Ranking</h2>
+
+      <div class="ranking-tabs">
+        <button class="tab active" data-sort="score">Por puntos</button>
+        <button class="tab" data-sort="pct">Por % acierto</button>
+      </div>
+
+      <div id="ranking-list" class="ranking-list">
+        <div class="loading-msg">Cargando...</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="preguntas.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
