@@ -707,7 +707,7 @@ const PREGUNTAS = [
   {
     id: 85,
     pregunta: "¿Qué película de Radu Jude recibió el Oso de Oro en la Berlinale 2021?",
-    opciones: ["Aferim!", "No me esperes demasiado al fin del mundo", "Mala suerte en el sexo o porno loco", "Scarred Hearts"],
+    opciones: ["Aferim!", "Do Not Expect Too Much from the End of the World", "Bad Luck Banging or Loony Porn", "Scarred Hearts"],
     correcta: 2,
     categoria: "Premios",
     dificultad: "dificil"
@@ -1674,19 +1674,19 @@ const PREGUNTAS = [
   },
   {
     id: 206,
-    pregunta: "¿En qué año se estrenó 'Persona' de Ingmar Bergman?",
-    opciones: ["1960", "1963", "1966", "1969"],
+    pregunta: "¿En qué año se estrenó la película 'Fanny and Alexander' de Ingmar Bergman?",
+    opciones: ["1976", "1979", "1982", "1986"],
     correcta: 2,
     categoria: "Películas",
-    dificultad: "facil"
+    dificultad: "media"
   },
   {
     id: 207,
-    pregunta: "¿En qué año se estrenó 'Seven Samurai' de Akira Kurosawa?",
-    opciones: ["1949", "1952", "1954", "1958"],
-    correcta: 2,
+    pregunta: "¿En qué año se estrenó 'Red Beard' de Akira Kurosawa?",
+    opciones: ["1955", "1958", "1962", "1965"],
+    correcta: 3,
     categoria: "Películas",
-    dificultad: "facil"
+    dificultad: "media"
   },
   {
     id: 208,
