@@ -1841,7 +1841,7 @@ const PREGUNTAS = [
   },
   {
     id: 225,
-    pregunta: "¿Qué cineasta francés acuñó el concepto de 'fotogenia' en los años 20?",
+    pregunta: "¿Qué cineasta y teórico desarrolló el concepto de 'fotogenia' como cualidad específica del cine en su libro 'Bonjour Cinéma' (1921)?",
     opciones: ["Jean Epstein", "René Clair", "Abel Gance", "Marcel Carné"],
     correcta: 0,
     categoria: "Teoría del Cine",
@@ -1870,7 +1870,7 @@ const PREGUNTAS = [
   },
   {
     id: 228,
-    pregunta: "¿Qué movimiento documental británico de finales de los 50, liderado por Lindsay Anderson y Karel Reisz, defendía la libertad creativa y el rodaje en localizaciones reales?",
+    pregunta: "¿Qué movimiento documental británico de los 50-60, liderado por Lindsay Anderson y Karel Reisz, defendía la libertad creativa y el rodaje en localizaciones reales?",
     opciones: ["Kitchen Sink Realism", "Free Cinema", "Dogma 95", "British New Wave"],
     correcta: 1,
     categoria: "Historia del Cine",
@@ -1943,7 +1943,7 @@ const PREGUNTAS = [
   {
     id: 237,
     pregunta: "¿Qué movimiento latinoamericano defendía un cine político y anticolonial en los años 60 y 70?",
-    opciones: ["Cinema Novo", "Tercer Cine", "Free Cinema", "Nuevo Cine Latino"],
+    opciones: ["Cinema Tropical", "Tercer Cine", "Cine Imperfecto", "Cine de la Base"],
     correcta: 1,
     categoria: "Historia del Cine",
     dificultad: "media"
@@ -2235,5 +2235,13 @@ const PREGUNTAS = [
     correcta: 1,
     categoria: "Bandas Sonoras",
     dificultad: "media"
-  }
+  },
+  {
+    id: 274,
+    pregunta: "¿En qué provincia española se rodó la escena del duelo final del cementerio en 'The Good, the Bad and the Ugly' (1966)?",
+    opciones: ["Palencia", "Burgos", "Soria", "Teruel"],
+    correcta: 1,
+    categoria: "Películas",
+    dificultad: "media"
+  },
 ];
