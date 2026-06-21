@@ -1696,5 +1696,108 @@ const PREGUNTAS = [
     categoria: "Países",
     dificultad: "media"
   },
-
+  {
+    id: 209,
+    pregunta: "¿Cuál de estas películas de Disney se estrenó antes?",
+    opciones: ["Bambi", "Dumbo", "Pinocho", "Cenicienta"],
+    correcta: 2,
+    categoria: "Historia del Cine",
+    dificultad: "media"
+  },
+  {
+    id: 210,
+    pregunta: "¿Cuántas películas tiene la saga de Indiana Jones (hasta 2026)?",
+    opciones: ["3", "4", "5", "6"],
+    correcta: 2,
+    categoria: "Películas",
+    dificultad: "facil"
+  },
+  {
+    id: 211,
+    pregunta: "¿Qué compositor contrató Universal para realizar la banda sonora de 'The Thing' (1982) de John Carpenter?",
+    opciones: ["Bernard Herrmann", "Jerry Goldsmith", "Ennio Morricone", "John Williams"],
+    correcta: 2,
+    categoria: "Bandas Sonoras",
+    dificultad: "media"
+  },
+  {
+    id: 212,
+    pregunta: "¿Qué director polaco dirigió 'Ashes and Diamonds' (1958)?",
+    opciones: ["Wojciech Jerzy Has", "Andrzej Wajda", "Krzysztof Kieślowski", "Jerzy Kawalerowicz"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 213,
+    pregunta: "¿Qué director húngaro dirigió 'The Tragedy of Man' (2011)?",
+    opciones: ["Béla Tarr", "Miklós Jancsó", "Marcell Jankovics", "István Szabó"],
+    correcta: 2,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 214,
+    pregunta: "¿En cuántas películas trabajaron juntos Matti Pellonpää y Aki Kaurismäki?",
+    opciones: ["5", "7", "9", "11"],
+    correcta: 2,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 215,
+    pregunta: "¿Cuántos eran los Hermanos Marx en total?",
+    opciones: ["3", "4", "5", "6"],
+    correcta: 2,
+    categoria: "Historia del Cine",
+    dificultad: "media"
+  },
+  {
+    id: 216,
+    pregunta: "¿Por qué es conocida la cineasta alemana Lotte Reiniger?",
+    opciones: ["Por dirigir el primer largometraje de animación con siluetas recortadas", "Por ser la primera mujer en ganar la Palma de Oro en Cannes", "Por inventar el sistema de doblaje sincronizado", "Por crear el primer sistema de color en cine europeo"],
+    correcta: 0,
+    categoria: "Historia del Cine",
+    dificultad: "media"
+  },
+  {
+    id: 217,
+    pregunta: "¿Qué peculiaridad técnica tiene 'Russian Ark' (2002) de Aleksandr Sokurov?",
+    opciones: ["Está rodada sin actores profesionales", "Fue filmada en un único día", "Está rodada en un único plano secuencia ininterrumpido", "Está filmada simultáneamente desde 360 grados"],
+    correcta: 2,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 218,
+    pregunta: "¿En cuál de estas películas no actúa Song Kang-ho?",
+    opciones: ["Sympathy for Mr. Vengeance (2002)", "The Foul King (2000)", "I Saw the Devil (2010)", "Cobweb (2023)"],
+    correcta: 2,
+    categoria: "Actores",
+    dificultad: "media"
+  },
+  {
+    id: 219,
+    pregunta: "¿Cómo se tituló en España 'She Wore a Yellow Ribbon' (1949) de John Ford?",
+    opciones: ["La legión invencible", "Pasión de los fuertes", "El último refugio", "El lazo amarillo"],
+    correcta: 0,
+    categoria: "Películas",
+    dificultad: "dificil"
+  },
+  {
+    id: 220,
+    pregunta: "¿Cuál fue la última película de Ingmar Bergman como director?",
+    opciones: ["Fanny and Alexander", "Saraband", "In the Presence of a Clown", "After the Rehearsal"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 221,
+    pregunta: "¿Qué actor británico protagoniza 'La quimera' (2023) de Alice Rohrwacher como arqueólogo reconvertido en ladrón de tumbas etruscas?",
+    opciones: ["Tom Burke", "Josh O'Connor", "Andrew Garfield", "Paul Mescal"],
+    correcta: 1,
+    categoria: "Actores",
+    dificultad: "facil"
+  },
 ];
