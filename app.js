@@ -221,7 +221,7 @@ async function loadRanking() {
   list.innerHTML = '<div class="loading-msg">Cargando...</div>';
 
   const field = currentSort === "score" ? "puntos" : "porcentaje";
-  const q     = query(collection(db, "resultados"), orderBy(field, "desc"), limit(30));
+  const q     = query(collection(db, "resultados"), orderBy(field, "desc"), limit(10));
   const snap  = await getDocs(q);
 
   if (snap.empty) {
