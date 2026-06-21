@@ -73,7 +73,7 @@ const PREGUNTAS = [
     pregunta: "¿Quién compuso la banda sonora de 'Star Wars'?",
     opciones: ["Hans Zimmer", "Ennio Morricone", "John Williams", "Bernard Herrmann"],
     correcta: 2,
-    categoria: "Bandas Sonoras",
+    categoria: "Crew",
     dificultad: "facil"
   },
   {
@@ -401,7 +401,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué revista fue el semillero teórico de los directores de la Nouvelle Vague antes de pasar a la realización?",
     opciones: ["Positif", "Cahiers du Cinéma", "Sight & Sound", "La Revue du Cinéma"],
     correcta: 1,
-    categoria: "Nouvelle Vague",
+    categoria: "Historia del Cine",
     dificultad: "media"
   },
   {
@@ -885,7 +885,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué canción suena en el célebre travelling final de la barra de 'Goodfellas' (1990)?",
     opciones: ["Layla, de Derek and the Dominos", "Gimme Shelter, de The Rolling Stones", "Then He Kissed Me, de The Crystals", "Sunshine of Your Love, de Cream"],
     correcta: 0,
-    categoria: "Bandas Sonoras",
+    categoria: "Crew",
     dificultad: "dificil"
   },
   {
@@ -989,7 +989,7 @@ const PREGUNTAS = [
     pregunta: "¿Con qué película de Kenji Mizoguchi dos mujeres fantasma se vengan de los hombres que las abandonaron?",
     opciones: ["Sansho the Bailiff (1954)", "Ugetsu (1953)", "The Life of Oharu (1952)", "The Crucified Lovers (1954)"],
     correcta: 1,
-    categoria: "Kenji Mizoguchi",
+    categoria: "Películas",
     dificultad: "media"
   },
    {
@@ -997,7 +997,7 @@ const PREGUNTAS = [
     pregunta: "¿En cuántas películas de Ingmar Bergman trabajó el director de fotografía Sven Nykvist?",
     opciones: ["12", "16", "20", "24"],
     correcta: 2,
-    categoria: "Directores",
+    categoria: "Crew",
     dificultad: "dificil"
   },
   {
@@ -1389,7 +1389,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué canción suena en la icónica escena del Club Silencio en 'Mulholland Drive' (2001)?",
     opciones: ["In Dreams, de Roy Orbison", "Crying, de Roy Orbison", "Llorando, de Rebekah Del Rio", "Blue Velvet, de Bobby Vinton"],
     correcta: 2,
-    categoria: "Bandas Sonoras",
+    categoria: "Crew",
     dificultad: "dificil"
   },
   {
@@ -1429,7 +1429,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué canción interpretan casi todos los personajes de 'Magnolia' (1999) simultáneamente en una escena memorable?",
     opciones: ["Wise Up, de Aimee Mann", "One, de U2", "Over the Hill, de Roy Orbison", "Both Sides Now, de Joni Mitchell"],
     correcta: 0,
-    categoria: "Bandas Sonoras",
+    categoria: "Crew",
     dificultad: "dificil"
   },
   {
@@ -1477,7 +1477,7 @@ const PREGUNTAS = [
     pregunta: "¿Cuál de estos guiones no pertenece a Paul Schrader?",
     opciones: ["Taxi Driver (1976)", "Raging Bull (1980)", "The Conversation (1974)", "Obsession (1976)"],
     correcta: 2,
-    categoria: "Guionistas",
+    categoria: "Crew",
     dificultad: "dificil"
   },
   {
@@ -1581,7 +1581,7 @@ const PREGUNTAS = [
     pregunta: "¿Quién escribió el guion de 'Hiroshima mon amour' (1959) de Alain Resnais?",
     opciones: ["Alain Robbe-Grillet", "Marguerite Duras", "Simone de Beauvoir", "Nathalie Sarraute"],
     correcta: 1,
-    categoria: "Guionistas",
+    categoria: "Crew",
     dificultad: "media"
   },
   {
@@ -1629,7 +1629,7 @@ const PREGUNTAS = [
     pregunta: "¿Con qué escritor de ciencia ficción coescribió Stanley Kubrick el guion de '2001: A Space Odyssey' (1968)?",
     opciones: ["Isaac Asimov", "Ray Bradbury", "Arthur C. Clarke", "Philip K. Dick"],
     correcta: 2,
-    categoria: "Guionistas",
+    categoria: "Crew",
     dificultad: "media"
   },
   {
@@ -1717,7 +1717,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué compositor contrató Universal para realizar la banda sonora de 'The Thing' (1982) de John Carpenter?",
     opciones: ["Bernard Herrmann", "Jerry Goldsmith", "Ennio Morricone", "John Williams"],
     correcta: 2,
-    categoria: "Bandas Sonoras",
+    categoria: "Crew",
     dificultad: "media"
   },
   {
@@ -2185,7 +2185,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué compositor creó la banda sonora de '1900' (1976) de Bernardo Bertolucci?",
     opciones: ["Nino Rota", "Ennio Morricone", "Piero Piccioni", "Luis Bacalov"],
     correcta: 1,
-    categoria: "Bandas Sonoras",
+    categoria: "Crew",
     dificultad: "media"
   },
   {
@@ -2217,7 +2217,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué banda sonora es obra de Angelo Badalamenti?",
     opciones: ["Blue Velvet (1986)", "The Last Emperor (1987)", "Mississippi Burning (1988)", "Cinema Paradiso (1988)"],
     correcta: 0,
-    categoria: "Bandas Sonoras",
+    categoria: "Crew",
     dificultad: "media"
   },
   {
@@ -2233,7 +2233,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué banda sonora compuso Wojciech Kilar?",
     opciones: ["Heat (1995)", "Bram Stoker's Dracula (1992)", "Amadeus (1984)", "Barry Lyndon (1975)"],
     correcta: 1,
-    categoria: "Bandas Sonoras",
+    categoria: "Crew",
     dificultad: "media"
   },
   {
@@ -2353,7 +2353,7 @@ const PREGUNTAS = [
     pregunta: "¿Quién compuso la banda sonora de gran parte de la filmografía de Dario Argento?",
     opciones: ["Ennio Morricone", "Goblin", "Bruno Nicolai", "Pino Donaggio"],
     correcta: 1,
-    categoria: "Bandas Sonoras",
+    categoria: "Crew",
     dificultad: "media"
   },
   {
@@ -2601,7 +2601,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué director de fotografía trabajó con Terrence Malick en 'The Tree of Life' y con Alejandro González Iñárritu en 'The Revenant'?",
     opciones: ["Roger Deakins", "Emmanuel Lubezki", "Rodrigo Prieto", "Janusz Kamiński"],
     correcta: 1,
-    categoria: "Directores",
+    categoria: "Crew",
     dificultad: "media"
   },
   {
@@ -2609,7 +2609,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué montador colaboró con Martin Scorsese en la mayoría de sus películas desde 'Goodfellas' (1990)?",
     opciones: ["Walter Murch", "Thelma Schoonmaker", "Sally Menke", "Pietro Scalia"],
     correcta: 1,
-    categoria: "Directores",
+    categoria: "Crew",
     dificultad: "facil"
   },
   {
@@ -2617,7 +2617,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué guionista escribió 'Eternal Sunshine of the Spotless Mind' (2004) y 'Being John Malkovich' (1999)?",
     opciones: ["Charlie Kaufman", "Paul Haggis", "Tony Kushner", "David Webb Peoples"],
     correcta: 0,
-    categoria: "Directores",
+    categoria: "Crew",
     dificultad: "media"
   },
   {
@@ -2625,7 +2625,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué director de fotografía es conocido por su trabajo con los Coen Brothers y por 'Blade Runner 2049'?",
     opciones: ["Wally Pfister", "Robert Richardson", "Roger Deakins", "Gordon Willis"],
     correcta: 2,
-    categoria: "Directores",
+    categoria: "Crew",
     dificultad: "facil"
   },
   {
@@ -2633,7 +2633,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué compositor creó las bandas sonoras de 'Schindler's List' y 'E.T.' de Spielberg?",
     opciones: ["Bernard Herrmann", "Jerry Goldsmith", "John Williams", "Max Steiner"],
     correcta: 2,
-    categoria: "Directores",
+    categoria: "Crew",
     dificultad: "facil"
   },
   {
@@ -2641,7 +2641,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué montadora colaboró con Quentin Tarantino en todas sus películas hasta su muerte en 2010?",
     opciones: ["Anne V. Coates", "Dede Allen", "Sally Menke", "Carol Littleton"],
     correcta: 2,
-    categoria: "Directores",
+    categoria: "Crew",
     dificultad: "dificil"
   },
   {
@@ -2649,7 +2649,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué director de fotografía trabajó con Miloš Forman en 'Amadeus'?",
     opciones: ["Sven Nykvist", "Vilmos Zsigmond", "Gordon Willis", "Miroslav Ondříček"],
     correcta: 3,
-    categoria: "Directores",
+    categoria: "Crew",
     dificultad: "dificil"
   },
   {
@@ -2657,7 +2657,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué productor fue el responsable de la saga de James Bond desde 'Dr. No' (1962) hasta 'Licence to Kill' (1989)?",
     opciones: ["David O. Selznick", "Albert R. Broccoli", "Samuel Goldwyn", "Dino De Laurentiis"],
     correcta: 1,
-    categoria: "Directores",
+    categoria: "Crew",
     dificultad: "dificil"
   },
   {
@@ -2665,7 +2665,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué compositor creó la banda sonora de 'Blade Runner' (1982) de Ridley Scott?",
     opciones: ["Giorgio Moroder", "Vangelis", "Klaus Schulze", "Jean-Michel Jarre"],
     correcta: 1,
-    categoria: "Directores",
+    categoria: "Crew",
     dificultad: "media"
   },
   {
@@ -2673,7 +2673,7 @@ const PREGUNTAS = [
     pregunta: "¿Qué guionista escribió 'Casablanca' (1942) junto a su hermano Julius?",
     opciones: ["Billy Wilder", "Philip Epstein", "Preston Sturges", "Ben Hecht"],
     correcta: 1,
-    categoria: "Directores",
+    categoria: "Crew",
     dificultad: "dificil"
   },
 ];
