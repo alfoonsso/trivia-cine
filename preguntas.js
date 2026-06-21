@@ -1590,7 +1590,7 @@ const PREGUNTAS = [
     opciones: ["Fritz Lang", "Jean Renoir", "Jean Epstein", "René Clair"],
     correcta: 2,
     categoria: "Directores",
-    dificultad: "medio"
+    dificultad: "media"
   },
   {
     id: 196,
@@ -2241,6 +2241,158 @@ const PREGUNTAS = [
     pregunta: "¿En qué provincia española se rodó la escena del duelo final del cementerio en 'The Good, the Bad and the Ugly' (1966)?",
     opciones: ["Palencia", "Burgos", "Soria", "Teruel"],
     correcta: 1,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 275,
+    pregunta: "¿Qué técnica de animación caracteriza la obra del checo Jan Švankmajer?",
+    opciones: ["Animación por ordenador", "Stop-motion con objetos cotidianos y arcilla", "Animación de siluetas recortadas", "Cel animation tradicional"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 276,
+    pregunta: "¿En qué año se estrenó 'Metropolis' de Fritz Lang?",
+    opciones: ["1925", "1927", "1929", "1931"],
+    correcta: 1,
+    categoria: "Historia del Cine",
+    dificultad: "media"
+  },
+  {
+    id: 277,
+    pregunta: "¿Qué actriz protagoniza 'A Woman Under the Influence' (1974) de John Cassavetes?",
+    opciones: ["Gena Rowlands", "Seymour Cassel", "Lynn Carlin", "Joanna Moore"],
+    correcta: 0,
+    categoria: "Actores",
+    dificultad: "media"
+  },
+  {
+    id: 278,
+    pregunta: "¿En qué año se estrenó 'Jeanne Dielman' de Chantal Akerman?",
+    opciones: ["1973", "1975", "1977", "1979"],
+    correcta: 1,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 279,
+    pregunta: "¿Por qué elemento formal es especialmente conocido el estilo de Max Ophüls?",
+    opciones: ["Los planos fijos de larga duración", "Los travelling y grúas de gran fluidez", "El montaje muy rápido", "La cámara en mano nerviosa"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 280,
+    pregunta: "¿Cómo se denomina el tono sofisticado e irónico característico de las comedias de Ernst Lubitsch?",
+    opciones: ["Screwball", "The Lubitsch Touch", "Wit Comedy", "Romantic Irony"],
+    correcta: 1,
+    categoria: "Historia del Cine",
+    dificultad: "media"
+  },
+  {
+    id: 281,
+    pregunta: "¿Qué director es considerado el padre del Parallel Cinema?",
+    opciones: ["Mrinal Sen", "Ritwik Ghatak", "Satyajit Ray", "Guru Dutt"],
+    correcta: 2,
+    categoria: "Directores",
+    dificultad: "facil"
+  },
+  {
+    id: 282,
+    pregunta: "¿Qué película de Ritwik Ghatak narra la partición de Bengala a través de una familia de refugiados?",
+    opciones: ["The Cloud-Capped Star (1960)", "The Golden Thread (1965)", "A Soft Note on a Sharp Scale (1961)", "A River Called Titas (1973)"],
+    correcta: 0,
+    categoria: "Películas",
+    dificultad: "dificil"
+  },
+  {
+    id: 283,
+    pregunta: "¿Qué película de Claire Denis retrata la vida de soldados de la Legión Extranjera francesa en África?",
+    opciones: ["Beau Travail (1999)", "Trouble Every Day (2001)", "35 Shots of Rum (2008)", "White Material (2009)"],
+    correcta: 0,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 284,
+    pregunta: "¿Qué película de Bruno Dumont ganó el Grand Prix del Jurado en Cannes en 1999?",
+    opciones: ["La Vie de Jésus (1997)", "L'Humanité (1999)", "Flandres (2006)", "Hors Satan (2011)"],
+    correcta: 1,
+    categoria: "Premios",
+    dificultad: "dificil"
+  },
+  {
+    id: 285,
+    pregunta: "¿Qué película de Quentin Dupieux trata sobre un neumático que cobra vida y mata a personas con poderes telequinéticos?",
+    opciones: ["Deerskin (2019)", "Mandibles (2020)", "Rubber (2010)", "Wrong (2012)"],
+    correcta: 2,
+    categoria: "Películas",
+    dificultad: "facil"
+  },
+  {
+    id: 286,
+    pregunta: "¿Qué película de Dario Argento es considerada la obra cumbre del giallo italiano?",
+    opciones: ["Opera (1987)", "Tenebrae (1982)", "Deep Red (1975)", "Suspiria (1977)"],
+    correcta: 3,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 287,
+    pregunta: "¿Qué elemento visual es marca inconfundible de 'Suspiria' (1977) de Dario Argento?",
+    opciones: ["El blanco y negro expresionista", "La iluminación saturada en rojos y azules intensos", "La cámara en mano permanente", "Los planos fijos de larguísima duración"],
+    correcta: 1,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 288,
+    pregunta: "¿Quién compuso la banda sonora de gran parte de la filmografía de Dario Argento?",
+    opciones: ["Ennio Morricone", "Goblin", "Bruno Nicolai", "Pino Donaggio"],
+    correcta: 1,
+    categoria: "Bandas Sonoras",
+    dificultad: "media"
+  },
+  {
+    id: 289,
+    pregunta: "¿Qué película de Mario Bava es considerada la fundadora del giallo italiano como género?",
+    opciones: ["Blood and Black Lace", "Bay of Blood", "The Girl Who Knew Too Much", "Kill Baby Kill"],
+    correcta: 2,
+    categoria: "Historia del Cine",
+    dificultad: "dificil"
+  },
+  {
+    id: 290,
+    pregunta: "¿En qué año se estrenó 'Le Bonheur' de Agnès Varda?",
+    opciones: ["1958", "1960", "1962", "1965"],
+    correcta: 3,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 291,
+    pregunta: "¿En qué año se estrenó 'Tokyo Story' de Yasujiro Ozu?",
+    opciones: ["1945", "1948", "1953", "1957"],
+    correcta: 2,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 292,
+    pregunta: "¿En qué año se estrenó 'L'Avventura' de Michelangelo Antonioni?",
+    opciones: ["1958", "1960", "1962", "1964"],
+    correcta: 1,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 293,
+    pregunta: "¿En qué año se estrenó 'Aguirre, the Wrath of God' de Werner Herzog?",
+    opciones: ["1972", "1974", "1976", "1978"],
+    correcta: 0,
     categoria: "Películas",
     dificultad: "media"
   },
