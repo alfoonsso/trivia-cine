@@ -193,6 +193,13 @@ function endGame() {
 // ── 12. GUARDAR EN FIREBASE ───────────────────────────────
 async function saveResult(pct) {
   const savingMsg = document.getElementById("saving-msg");
+
+  // Modo prueba: si el nombre es "test" no guarda en Firebase
+  if (state.playerName.toLowerCase() === "test") {
+    savingMsg.textContent = "Modo prueba — resultado no guardado";
+    return;
+  }
+
   savingMsg.textContent = "Guardando resultado...";
 
   await addDoc(collection(db, "resultados"), {
