@@ -1800,4 +1800,440 @@ const PREGUNTAS = [
     categoria: "Actores",
     dificultad: "facil"
   },
+  {
+    id: 222,
+    pregunta: "¿Qué defendía André Bazin frente al montaje excesivo?",
+    opciones: [
+      "La cámara subjetiva",
+      "La profundidad de campo y el plano largo",
+      "El montaje intelectual",
+      "La iluminación expresionista"
+    ],
+    correcta: 1,
+    categoria: "Teoría del Cine",
+    dificultad: "media"
+  },
+  {
+    id: 223,
+    pregunta: "¿Cómo se denomina la continuidad espacial y temporal clásica de Hollywood destinada a ocultar el montaje?",
+    opciones: [
+      "Montaje invisible",
+      "Montaje intelectual",
+      "Montaje de atracciones",
+      "Montaje discontinuo"
+    ],
+    correcta: 0,
+    categoria: "Teoría del Cine",
+    dificultad: "facil"
+  },
+  {
+    id: 224,
+    pregunta: "¿Qué término describe el sonido cuya fuente no aparece en pantalla pero pertenece al espacio narrativo?",
+    opciones: [
+      "Sonido extradiegético",
+      "Sonido diegético off",
+      "Voice-over",
+      "Contrapunto sonoro"
+    ],
+    correcta: 1,
+    categoria: "Teoría del Cine",
+    dificultad: "dificil"
+  },
+  {
+    id: 225,
+    pregunta: "¿Qué cineasta francés acuñó el concepto de 'fotogenia' en los años 20?",
+    opciones: ["Jean Epstein", "René Clair", "Abel Gance", "Marcel Carné"],
+    correcta: 0,
+    categoria: "Teoría del Cine",
+    dificultad: "dificil"
+  },
+  {
+    id: 226,
+    pregunta: "¿En qué año tuvo lugar la célebre primera proyección pública de los hermanos Lumière en París?",
+    opciones: ["1893", "1895", "1897", "1900"],
+    correcta: 1,
+    categoria: "Historia del Cine",
+    dificultad: "facil"
+  },
+  {
+    id: 227,
+    pregunta: "¿Qué movimiento brasileño estuvo liderado por Glauber Rocha en los años 60?",
+    opciones: [
+      "Cinema Novo",
+      "Tropicalismo",
+      "Cinema Marginal",
+      "Chanchada"
+    ],
+    correcta: 0,
+    categoria: "Historia del Cine",
+    dificultad: "media"
+  },
+  {
+    id: 228,
+    pregunta: "¿Qué movimiento documental británico de finales de los 50, liderado por Lindsay Anderson y Karel Reisz, defendía la libertad creativa y el rodaje en localizaciones reales?",
+    opciones: ["Kitchen Sink Realism", "Free Cinema", "Dogma 95", "British New Wave"],
+    correcta: 1,
+    categoria: "Historia del Cine",
+    dificultad: "media"
+  },
+  {
+    id: 229,
+    pregunta: "¿Quién dirigió 'Nanook of the North' (1922), considerada una de las primeras películas documentales de la historia?",
+    opciones: ["John Grierson", "Robert J. Flaherty", "Dziga Vertov", "Pare Lorentz"],
+    correcta: 1,
+    categoria: "Historia del Cine",
+    dificultad: "facil"
+  },
+  {
+    id: 230,
+    pregunta: "¿Qué cineasta soviético dirigió 'Man with a Movie Camera' (1929)?",
+    opciones: ["Lev Kuleshov", "Sergei Eisenstein", "Dziga Vertov", "Vsevolod Pudovkin"],
+    correcta: 2,
+    categoria: "Historia del Cine",
+    dificultad: "facil"
+  },
+  {
+    id: 231,
+    pregunta: "¿Qué término describe una toma larga sin cortes perceptibles?",
+    opciones: ["Plano americano", "Plano secuencia", "Plano recurso", "Plano máster"],
+    correcta: 1,
+    categoria: "Teoría del Cine",
+    dificultad: "facil"
+  },
+  {
+    id: 232,
+    pregunta: "¿Qué película sonora de Fritz Lang está considerada una obra maestra temprana del cine de asesinos en serie?",
+    opciones: ["Metropolis", "Dr. Mabuse, the Gambler", "M", "Spies"],
+    correcta: 2,
+    categoria: "Historia del Cine",
+    dificultad: "media"
+  },
+  {
+    id: 233,
+    pregunta: "¿Qué cineasta escribió el ensayo 'Una cierta tendencia del cine francés', texto fundamental para la teoría del autor?",
+    opciones: ["André Bazin", "Jean-Luc Godard", "François Truffaut", "Jacques Rivette"],
+    correcta: 2,
+    categoria: "Teoría del Cine",
+    dificultad: "media"
+  },
+  {
+    id: 234,
+    pregunta: "¿Qué película de Luis Buñuel y Salvador Dalí comienza con la célebre imagen de un ojo cortado por una navaja?",
+    opciones: ["La edad de oro", "Viridiana", "Un perro andaluz", "Los olvidados"],
+    correcta: 2,
+    categoria: "Historia del Cine",
+    dificultad: "facil"
+  },
+  {
+    id: 235,
+    pregunta: "¿Qué movimiento cinematográfico alemán tuvo como figuras destacadas a Rainer Werner Fassbinder, Werner Herzog y Wim Wenders?",
+    opciones: ["Expresionismo alemán", "Nuevo Cine Alemán", "Escuela de Berlín", "Kammerspielfilm"],
+    correcta: 1,
+    categoria: "Historia del Cine",
+    dificultad: "media"
+  },
+  {
+    id: 236,
+    pregunta: "¿Qué tipo de montaje alterna acciones simultáneas que ocurren en lugares distintos?",
+    opciones: ["Montaje paralelo", "Montaje métrico", "Montaje tonal", "Montaje de continuidad"],
+    correcta: 0,
+    categoria: "Teoría del Cine",
+    dificultad: "facil"
+  },
+  {
+    id: 237,
+    pregunta: "¿Qué movimiento latinoamericano defendía un cine político y anticolonial en los años 60 y 70?",
+    opciones: ["Cinema Novo", "Tercer Cine", "Free Cinema", "Nuevo Cine Latino"],
+    correcta: 1,
+    categoria: "Historia del Cine",
+    dificultad: "media"
+  },
+  {
+    id: 238,
+    pregunta: "¿Qué término describe los elementos visuales que aparecen dentro del encuadre y forman parte de la puesta en escena?",
+    opciones: ["Mise-en-scène", "Découpage", "Raccord", "Blocking"],
+    correcta: 0,
+    categoria: "Teoría del Cine",
+    dificultad: "media"
+  },
+  {
+    id: 239,
+    pregunta: "¿Qué director realizó 'There Will Be Blood' (2007)?",
+    opciones: ["David Fincher", "Paul Thomas Anderson", "Martin Scorsese", "Todd Haynes"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "facil"
+  },
+  {
+    id: 240,
+    pregunta: "¿Qué actor interpreta a Travis Bickle en 'Taxi Driver' (1976)?",
+    opciones: ["Al Pacino", "Harvey Keitel", "Robert De Niro", "Dustin Hoffman"],
+    correcta: 2,
+    categoria: "Actores",
+    dificultad: "facil"
+  },
+  {
+    id: 241,
+    pregunta: "¿Qué película de Stanley Kubrick está ambientada durante la Guerra de Vietnam?",
+    opciones: ["Paths of Glory", "Barry Lyndon", "Full Metal Jacket", "Dr. Strangelove"],
+    correcta: 2,
+    categoria: "Películas",
+    dificultad: "facil"
+  },
+  {
+    id: 242,
+    pregunta: "¿Quién dirigió 'The Piano Teacher' (2001)?",
+    opciones: ["Michael Haneke", "Ulrich Seidl", "Lars von Trier", "Cristian Mungiu"],
+    correcta: 0,
+    categoria: "Directores",
+    dificultad: "facil"
+  },
+  {
+    id: 243,
+    pregunta: "¿En qué película aparece el personaje Anton Chigurh?",
+    opciones: ["Sicario", "No Country for Old Men", "Hell or High Water", "The Assassination of Jesse James"],
+    correcta: 1,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 244,
+    pregunta: "¿Qué actor interpreta al protagonista de 'Oldboy' (2003)?",
+    opciones: ["Song Kang-ho", "Choi Min-sik", "Lee Byung-hun", "Ha Jung-woo"],
+    correcta: 1,
+    categoria: "Actores",
+    dificultad: "media"
+  },
+  {
+    id: 245,
+    pregunta: "¿Qué película de los hermanos Coen transcurre principalmente en Minnesota y gira en torno a un secuestro fallido?",
+    opciones: ["Blood Simple", "Miller's Crossing", "Fargo", "A Serious Man"],
+    correcta: 2,
+    categoria: "Películas",
+    dificultad: "facil"
+  },
+  {
+    id: 246,
+    pregunta: "¿Quién dirigió 'A Separation' (2011)?",
+    opciones: ["Jafar Panahi", "Asghar Farhadi", "Majid Majidi", "Abbas Kiarostami"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 247,
+    pregunta: "¿Qué actriz protagoniza 'Jeanne Dielman, 23 quai du Commerce, 1080 Bruxelles' (1975)?",
+    opciones: ["Delphine Seyrig", "Jeanne Moreau", "Bulle Ogier", "Anna Karina"],
+    correcta: 0,
+    categoria: "Actores",
+    dificultad: "dificil"
+  },
+  {
+    id: 248,
+    pregunta: "¿Qué película de Michael Mann narra el enfrentamiento entre un detective y un ladrón profesional en Los Ángeles?",
+    opciones: ["Collateral", "Miami Vice", "Thief", "Heat"],
+    correcta: 3,
+    categoria: "Películas",
+    dificultad: "facil"
+  },
+  {
+    id: 249,
+    pregunta: "¿Qué actor interpreta a Harry Lime en 'The Third Man' (1949)?",
+    opciones: ["Trevor Howard", "Joseph Cotten", "Orson Welles", "James Mason"],
+    correcta: 2,
+    categoria: "Actores",
+    dificultad: "media"
+  },
+  {
+    id: 250,
+    pregunta: "¿Qué director realizó 'The Travelling Players' (1975), una de las obras fundamentales del cine político griego?",
+    opciones: ["Theo Angelopoulos", "Constantin Costa-Gavras", "Michael Cacoyannis", "Yorgos Lanthimos"],
+    correcta: 0,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 251,
+    pregunta: "¿Qué actriz interpreta a la cantante de cabaret Lola Lola en 'The Blue Angel' (1930)?",
+    opciones: ["Brigitte Helm", "Marlene Dietrich", "Lotte Lenya", "Hildegard Knef"],
+    correcta: 1,
+    categoria: "Actores",
+    dificultad: "dificil"
+  },
+  {
+    id: 252,
+    pregunta: "¿Qué película de Miklós Jancsó transcurre en un campo de prisioneros tras una insurrección húngara del siglo XIX?",
+    opciones: ["The Round-Up", "Red Psalm", "The Red and the White", "Silence and Cry"],
+    correcta: 0,
+    categoria: "Películas",
+    dificultad: "dificil"
+  },
+  {
+    id: 253,
+    pregunta: "¿Quién dirigió 'Daisies' (1966), obra emblemática de la Nueva Ola Checoslovaca?",
+    opciones: ["Věra Chytilová", "Agnieszka Holland", "Márta Mészáros", "Juraj Herz"],
+    correcta: 0,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 254,
+    pregunta: "¿Qué actor protagoniza 'Taste of Cherry' (1997) de Abbas Kiarostami?",
+    opciones: ["Homayoun Ershadi", "Behrouz Vossoughi", "Babak Karimi", "Ali Nassirian"],
+    correcta: 0,
+    categoria: "Actores",
+    dificultad: "dificil"
+  },
+  {
+    id: 255,
+    pregunta: "¿Qué director senegalés realizó 'Ceddo' (1977)?",
+    opciones: ["Djibril Diop Mambéty", "Mahamat-Saleh Haroun", "Ousmane Sembène", "Souleymane Cissé"],
+    correcta: 2,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 256,
+    pregunta: "¿En qué película de Béla Tarr los habitantes de un pueblo esperan la llegada de un misterioso personaje llamado Irimiás?",
+    opciones: ["Damnation", "Werckmeister Harmonies", "Satantango", "The Turin Horse"],
+    correcta: 2,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 257,
+    pregunta: "¿Qué director realizó 'The House Is Black' (1963), obra fundamental del cine iraní?",
+    opciones: ["Sohrab Shahid Saless", "Forugh Farrokhzad", "Amir Naderi", "Dariush Mehrjui"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 258,
+    pregunta: "¿Qué actor interpreta al protagonista de 'The Ascent' (1977) de Larisa Shepitko?",
+    opciones: ["Boris Plotnikov", "Anatoli Solonitsyn", "Oleg Yankovsky", "Nikolai Grinko"],
+    correcta: 0,
+    categoria: "Actores",
+    dificultad: "dificil"
+  },
+  {
+    id: 259,
+    pregunta: "¿Qué película de Edward Yang se desarrolla durante las décadas de 1950 y 1960 en Taiwán?",
+    opciones: ["Yi Yi", "Taipei Story", "A Brighter Summer Day", "The Terrorizers"],
+    correcta: 2,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 260,
+    pregunta: "¿Quién dirigió 'The Color of Pomegranates' (1969)?",
+    opciones: ["Sergei Parajanov", "Andrei Tarkovsky", "Mikhail Kalatozov", "Tengiz Abuladze"],
+    correcta: 0,
+    categoria: "Directores",
+    dificultad: "facil"
+  },
+  {
+    id: 261,
+    pregunta: "¿Qué actriz protagoniza 'Cléo from 5 to 7' (1962) de Agnès Varda?",
+    opciones: ["Anna Karina", "Corinne Marchand", "Jeanne Moreau", "Bernadette Lafont"],
+    correcta: 1,
+    categoria: "Actores",
+    dificultad: "media"
+  },
+  {
+    id: 262,
+    pregunta: "¿Qué película de Emir Kusturica ganó la Palma de Oro en Cannes en 1995?",
+    opciones: ["Time of the Gypsies", "Black Cat, White Cat", "Underground", "When Father Was Away on Business"],
+    correcta: 2,
+    categoria: "Películas",
+    dificultad: "dificil"
+  },
+  {
+    id: 263,
+    pregunta: "¿Qué director realizó 'Sambizanga' (1972), una de las películas clave del cine africano anticolonial?",
+    opciones: ["Sarah Maldoror", "Ousmane Sembène", "Med Hondo", "Flora Gomes"],
+    correcta: 0,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 264,
+    pregunta: "¿Qué película de Apichatpong Weerasethakul transcurre entre una selva y una cueva donde conviven humanos, fantasmas y animales?",
+    opciones: ["Tropical Malady", "Blissfully Yours", "Uncle Boonmee Who Can Recall His Past Lives", "Syndromes and a Century"],
+    correcta: 2,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 265,
+    pregunta: "¿Quién dirigió 'Touki Bouki' (1973)?",
+    opciones: ["Souleymane Cissé", "Djibril Diop Mambéty", "Ousmane Sembène", "Abderrahmane Sissako"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 266,
+    pregunta: "¿Quién dirigió 'The Bitter Tears of Petra von Kant' (1972)?",
+    opciones: ["Werner Schroeter", "Rainer Werner Fassbinder", "Volker Schlöndorff", "Ulrike Ottinger"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 267,
+    pregunta: "¿Qué compositor creó la banda sonora de '1900' (1976) de Bernardo Bertolucci?",
+    opciones: ["Nino Rota", "Ennio Morricone", "Piero Piccioni", "Luis Bacalov"],
+    correcta: 1,
+    categoria: "Bandas Sonoras",
+    dificultad: "media"
+  },
+  {
+    id: 268,
+    pregunta: "¿Qué director ganó el Oso de Oro en Berlín con 'Alcarràs' (2022)?",
+    opciones: ["Isabel Coixet", "Carla Simón", "Icíar Bollaín", "Pilar Palomero"],
+    correcta: 1,
+    categoria: "Premios",
+    dificultad: "facil"
+  },
+  {
+    id: 269,
+    pregunta: "¿Quién dirigió 'The Mirror' (1975)?",
+    opciones: ["Andrei Tarkovsky", "Sergei Parajanov", "Aleksandr Sokurov", "Elem Klimov"],
+    correcta: 0,
+    categoria: "Directores",
+    dificultad: "facil"
+  },
+  {
+    id: 270,
+    pregunta: "¿Quién dirigió 'The Decameron' (1971)?",
+    opciones: ["Pier Paolo Pasolini", "Luchino Visconti", "Michelangelo Antonioni", "Bernardo Bertolucci"],
+    correcta: 0,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 271,
+    pregunta: "¿Qué banda sonora es obra de Angelo Badalamenti?",
+    opciones: ["Blue Velvet (1986)", "The Last Emperor (1987)", "Mississippi Burning (1988)", "Cinema Paradiso (1988)"],
+    correcta: 0,
+    categoria: "Bandas Sonoras",
+    dificultad: "media"
+  },
+  {
+    id: 272,
+    pregunta: "¿Quién dirigió 'Stromboli' (1950)?",
+    opciones: ["Roberto Rossellini", "Vittorio De Sica", "Luchino Visconti", "Michelangelo Antonioni"],
+    correcta: 0,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 273,
+    pregunta: "¿Qué banda sonora compuso Wojciech Kilar?",
+    opciones: ["Heat (1995)", "Bram Stoker's Dracula (1992)", "Amadeus (1984)", "Barry Lyndon (1975)"],
+    correcta: 1,
+    categoria: "Bandas Sonoras",
+    dificultad: "media"
+  }
 ];
