@@ -2396,4 +2396,284 @@ const PREGUNTAS = [
     categoria: "Películas",
     dificultad: "media"
   },
+  {
+    id: 294,
+    pregunta: "¿De qué país es el director Djibril Diop Mambéty?",
+    opciones: ["Mali", "Senegal", "Costa de Marfil", "Guinea"],
+    correcta: 1,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 295,
+    pregunta: "¿Qué película de Abderrahmane Sissako retrata la ocupación yihadista de una ciudad del norte de Mali?",
+    opciones: ["Waiting for Happiness (2002)", "Bamako (2006)", "Timbuktu (2014)", "Life on Earth (1998)"],
+    correcta: 2,
+    categoria: "Películas",
+    dificultad: "dificil"
+  },
+  {
+    id: 296,
+    pregunta: "¿Qué director es considerado uno de los grandes del cine africano con 'Yeelen' (1987)?",
+    opciones: ["Med Hondo", "Souleymane Cissé", "Jean-Marie Teno", "Idrissa Ouedraogo"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 297,
+    pregunta: "¿Qué premio ganó 'Timbuktu' (2014) de Abderrahmane Sissako en los César franceses?",
+    opciones: ["César a mejor película extranjera", "César a mejor película", "César a mejor director", "César a mejor guion"],
+    correcta: 1,
+    categoria: "Premios",
+    dificultad: "dificil"
+  },
+  {
+    id: 298,
+    pregunta: "¿Qué director realizó la película 'This Is Not a Burial, It's a Resurrection' (2019)?",
+    opciones: ["Lemohang Jeremiah Mosese", "Kaouther Ben Hania", "Reem Saleh", "Wanuri Kahiu"],
+    correcta: 3,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 299,
+    pregunta: "¿Qué cineasta egipcio es considerado el padre del cine árabe con más de 80 películas en su filmografía?",
+    opciones: ["Shadi Abdel Salam", "Youssef Chahine", "Daoud Abdel Sayed", "Mohamed Khan"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 300,
+    pregunta: "¿Qué película de Youssef Chahine ganó el Premio del Jurado en el Festival de Berlín en 1979?",
+    opciones: ["Cairo Station", "The Sparrow", "Alexandria... Why?", "An Egyptian Story"],
+    correcta: 2,
+    categoria: "Premios",
+    dificultad: "dificil"
+  },
+  {
+    id: 301,
+    pregunta: "¿Qué película del burkinés Idrissa Ouedraogo ganó el Premio del Jurado en Cannes en 1990?",
+    opciones: ["Yaaba", "Tilai", "Samba Traoré", "Kini and Adams"],
+    correcta: 1,
+    categoria: "Premios",
+    dificultad: "dificil"
+  },
+  {
+    id: 302,
+    pregunta: "¿En qué país se celebra el FESPACO, el festival de cine africano más importante del continente?",
+    opciones: ["Senegal", "Nigeria", "Marruecos", "Burkina Faso"],
+    correcta: 3,
+    categoria: "Premios",
+    dificultad: "dificil"
+  },
+  {
+    id: 303,
+    pregunta: "¿Qué película de Mahamat-Saleh Haroun ganó el Premio del Jurado en Cannes en 2010?",
+    opciones: ["Abouna", "Daratt", "A Screaming Man", "Grigris"],
+    correcta: 2,
+    categoria: "Premios",
+    dificultad: "dificil"
+  },
+  {
+    id: 304,
+    pregunta: "¿De qué país es el director Mahamat-Saleh Haroun?",
+    opciones: ["Camerún", "Niger", "Chad", "Mali"],
+    correcta: 2,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 305,
+    pregunta: "¿Qué película de Med Hondo denuncia las condiciones de vida de los inmigrantes africanos en Francia?",
+    opciones: ["Soleil Ô (1970)", "West Indies (1979)", "Sarraounia (1986)", "Lumière Noire (1994)"],
+    correcta: 0,
+    categoria: "Películas",
+    dificultad: "dificil"
+  },
+  {
+    id: 306,
+    pregunta: "¿De dónde es el director Lemohang Jeremiah Mosese?",
+    opciones: ["Burkina Faso", "Lesotho", "Rwanda", "Somalia"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 307,
+    pregunta: "¿Qué película de Lucrecia Martel está ambientada en el siglo XVIII y adapta la novela de Antonio di Benedetto?",
+    opciones: ["La ciénaga (2001)", "La niña santa (2004)", "La mujer sin cabeza (2008)", "Zama (2017)"],
+    correcta: 3,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 308,
+    pregunta: "¿Qué película brasileña de Fernando Meirelles retrató la vida en las favelas de Río de Janeiro?",
+    opciones: ["Tropa de Elite (2007)", "Central Station (1998)", "City of God (2002)", "The Second Mother (2015)"],
+    correcta: 2,
+    categoria: "Películas",
+    dificultad: "facil"
+  },
+  {
+    id: 309,
+    pregunta: "¿Qué película cubana de Tomás Gutiérrez Alea es considerada la obra cumbre del cine latinoamericano de los 60?",
+    opciones: ["La muerte de un burócrata", "Memorias del subdesarrollo", "Fresa y chocolate", "La última cena"],
+    correcta: 1,
+    categoria: "Películas",
+    dificultad: "media"
+  },
+  {
+    id: 310,
+    pregunta: "¿Qué director mexicano realizó 'El topo' (1970) y 'La montaña sagrada' (1973)?",
+    opciones: ["Carlos Reygadas", "Arturo Ripstein", "Alejandro Jodorowsky", "Felipe Cazals"],
+    correcta: 2,
+    categoria: "Directores",
+    dificultad: "facil"
+  },
+  {
+    id: 311,
+    pregunta: "¿Qué película de Walter Salles ganó el Oso de Oro en el Festival de Berlín en 1998?",
+    opciones: ["Behind the Sun", "Central Station", "The Motorcycle Diaries", "Foreign Land"],
+    correcta: 1,
+    categoria: "Premios",
+    dificultad: "media"
+  },
+  {
+    id: 312,
+    pregunta: "¿En qué país nació el director Alejandro González Iñárritu?",
+    opciones: ["Argentina", "Colombia", "México", "Chile"],
+    correcta: 2,
+    categoria: "Directores",
+    dificultad: "facil"
+  },
+  {
+    id: 313,
+    pregunta: "¿Qué película chilena de Pablo Larraín retrata la campaña del No en el plebiscito de 1988 contra Pinochet?",
+    opciones: ["Tony Manero (2008)", "Post Mortem (2010)", "No (2012)", "Spencer (2021)"],
+    correcta: 2,
+    categoria: "Películas",
+    dificultad: "facil"
+  },
+  {
+    id: 314,
+    pregunta: "¿Qué película argentina ganó el Óscar a mejor película de habla no inglesa en 2010?",
+    opciones: ["El secreto de sus ojos", "Nueve reinas", "La historia oficial", "Camila"],
+    correcta: 0,
+    categoria: "Premios",
+    dificultad: "facil"
+  },
+  {
+    id: 315,
+    pregunta: "¿Qué director brasileño realizó 'Pixote' (1981), retrato descarnado de la infancia marginal en Brasil?",
+    opciones: ["Glauber Rocha", "Hector Babenco", "Nelson Pereira dos Santos", "Ruy Guerra"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 316,
+    pregunta: "¿Qué película venezolana de Lorenzo Vigas ganó el León de Oro en Venecia en 2015?",
+    opciones: ["Desde allá", "Pelo malo", "La hora cero", "Azul y no tan rosa"],
+    correcta: 0,
+    categoria: "Premios",
+    dificultad: "dificil"
+  },
+    {
+    id: 317,
+    pregunta: "¿Qué película argentina se convirtió en la primera de América Latina en ganar el Óscar a la mejor película de habla no inglesa en 1986?",
+    opciones: ["La historia oficial", "El secreto de sus ojos", "Camila", "Tango, no me dejes nunca"],
+    correcta: 0,
+    categoria: "Premios",
+    dificultad: "media"
+  },
+  {
+    id: 318,
+    pregunta: "¿Qué director mexicano debutó con el largometraje 'Cronos' (1993)?",
+    opciones: ["Alejandro González Iñárritu", "Alfonso Cuarón", "Guillermo del Toro", "Carlos Reygadas"],
+    correcta: 2,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 319,
+    pregunta: "¿Qué director de fotografía trabajó con Terrence Malick en 'The Tree of Life' y con Alejandro González Iñárritu en 'The Revenant'?",
+    opciones: ["Roger Deakins", "Emmanuel Lubezki", "Rodrigo Prieto", "Janusz Kamiński"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 320,
+    pregunta: "¿Qué montador colaboró con Martin Scorsese en la mayoría de sus películas desde 'Goodfellas' (1990)?",
+    opciones: ["Walter Murch", "Thelma Schoonmaker", "Sally Menke", "Pietro Scalia"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "facil"
+  },
+  {
+    id: 321,
+    pregunta: "¿Qué guionista escribió 'Eternal Sunshine of the Spotless Mind' (2004) y 'Being John Malkovich' (1999)?",
+    opciones: ["Charlie Kaufman", "Paul Haggis", "Tony Kushner", "David Webb Peoples"],
+    correcta: 0,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 322,
+    pregunta: "¿Qué director de fotografía es conocido por su trabajo con los Coen Brothers y por 'Blade Runner 2049'?",
+    opciones: ["Wally Pfister", "Robert Richardson", "Roger Deakins", "Gordon Willis"],
+    correcta: 2,
+    categoria: "Directores",
+    dificultad: "facil"
+  },
+  {
+    id: 323,
+    pregunta: "¿Qué compositor creó las bandas sonoras de 'Schindler's List' y 'E.T.' de Spielberg?",
+    opciones: ["Bernard Herrmann", "Jerry Goldsmith", "John Williams", "Max Steiner"],
+    correcta: 2,
+    categoria: "Directores",
+    dificultad: "facil"
+  },
+  {
+    id: 324,
+    pregunta: "¿Qué montadora colaboró con Quentin Tarantino en todas sus películas hasta su muerte en 2010?",
+    opciones: ["Anne V. Coates", "Dede Allen", "Sally Menke", "Carol Littleton"],
+    correcta: 2,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 325,
+    pregunta: "¿Qué director de fotografía trabajó con Miloš Forman en 'Amadeus'?",
+    opciones: ["Sven Nykvist", "Vilmos Zsigmond", "Gordon Willis", "Miroslav Ondříček"],
+    correcta: 3,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 326,
+    pregunta: "¿Qué productor fue el responsable de la saga de James Bond desde 'Dr. No' (1962) hasta 'Licence to Kill' (1989)?",
+    opciones: ["David O. Selznick", "Albert R. Broccoli", "Samuel Goldwyn", "Dino De Laurentiis"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
+  {
+    id: 327,
+    pregunta: "¿Qué compositor creó la banda sonora de 'Blade Runner' (1982) de Ridley Scott?",
+    opciones: ["Giorgio Moroder", "Vangelis", "Klaus Schulze", "Jean-Michel Jarre"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "media"
+  },
+  {
+    id: 328,
+    pregunta: "¿Qué guionista escribió 'Casablanca' (1942) junto a su hermano Julius?",
+    opciones: ["Billy Wilder", "Philip Epstein", "Preston Sturges", "Ben Hecht"],
+    correcta: 1,
+    categoria: "Directores",
+    dificultad: "dificil"
+  },
 ];
