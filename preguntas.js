@@ -380,6 +380,7 @@ const PREGUNTAS = [
   { id: 366, pregunta: "¿Qué crítico y director de la Nouvelle Vague acuñó formalmente el concepto de la 'Teoría del Autor'?", opciones: ["Jean-Luc Godard","François Truffaut","André Bazin","Claude Chabrol"], correcta: 1, categoria: "Historia y Teoria" },
   { id: 367, pregunta: "¿Qué movimiento cinematográfico apostó por rodar en escenarios reales con actores no profesionales en la Italia de posguerra?", opciones: ["Expresionismo","Neorrealismo","Nouvelle Vague","Realismo Poético"], correcta: 1, categoria: "Historia y Teoria" },
   { id: 368, pregunta: "¿Qué severo código de censura autoimpuesto limitó la violencia y los temas tabú en Hollywood de 1934 a 1968?", opciones: ["La Caza de Brujas","El Código Hays","La Lista Negra de Hollywood","Las Leyes de Continuidad"], correcta: 1, categoria: "Historia y Teoria" }
+  
 ];
 
 
