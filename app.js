@@ -297,3 +297,95 @@ document.getElementById("btn-see-ranking").addEventListener("click", () => {
   showScreen("screen-ranking");
   loadRanking();
 });
+
+// Intercambio de Modos de Juego en el Home
+const classicSelect = document.getElementById("mode-classic-select");
+const boardSelect = document.getElementById("mode-board-select");
+const configClassic = document.getElementById("config-classic");
+const configBoard = document.getElementById("config-board");
+
+if (classicSelect && boardSelect) {
+  classicSelect.addEventListener("click", () => {
+    classicSelect.style.borderColor = "var(--gold)";
+    classicSelect.style.background = "var(--surface2)";
+    boardSelect.style.borderColor = "transparent";
+    boardSelect.style.background = "var(--surface)";
+    configClassic.style.display = "block";
+    configBoard.style.display = "none";
+  });
+
+  boardSelect.addEventListener("click", () => {
+    boardSelect.style.borderColor = "var(--gold)";
+    boardSelect.style.background = "var(--surface2)";
+    classicSelect.style.borderColor = "transparent";
+    classicSelect.style.background = "var(--surface)";
+    configClassic.style.display = "none";
+    configBoard.style.display = "block";
+  });
+}
+
+// Colores predefinidos para las fichas de los jugadores
+const PLAYER_COLORS = ["#e74c3c", "#3498db", "#2ecc71", "#f1c40f"];
+
+const boardPlayersGroup = document.getElementById("board-num-players");
+const boardInputsContainer = document.getElementById("board-players-inputs");
+const btnStartBoard = document.getElementById("btn-start-board");
+
+if (boardPlayersGroup && boardInputsContainer) {
+  const buttons = boardPlayersGroup.querySelectorAll("button");
+  
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // Cambiar estado activo visual del botón de selección
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      
+      const count = parseInt(btn.getAttribute("data-players"));
+      renderPlayerInputs(count);
+    });
+  });
+}
+
+// Función para pintar el número exacto de inputs de nombre con sus colores
+function renderPlayerInputs(count) {
+  boardInputsContainer.innerHTML = "";
+  for (let i = 0; i < count; i++) {
+    const div = document.createElement("div");
+    div.style.display = "flex";
+    div.style.alignItems = "center";
+    div.style.gap = "12px";
+    div.style.background = "var(--surface2)";
+    div.style.padding = "5px 12px";
+    div.style.borderRadius = "var(--radius)";
+    div.style.border = "1px solid rgba(255,255,255,0.05)";
+    
+    div.innerHTML = `
+      <span style="width: 12px; height: 12px; background: ${PLAYER_COLORS[i]}; border-radius: 50%;"></span>
+      <input type="text" class="board-player-name" data-idx="${i}" value="Jugador ${i + 1}" placeholder="Jugador ${i + 1}" 
+             style="background: transparent; border: none; padding: 10px 0; margin: 0; color: #fff; width: 100%; outline: none;" />
+    `;
+    boardInputsContainer.appendChild(div);
+  }
+}
+
+// Evento al pulsar "Empezar partida" en el modo Tablero
+if (btnStartBoard) {
+  btnStartBoard.addEventListener("click", () => {
+    const nameInputs = document.querySelectorAll(".board-player-name");
+    const playersData = [];
+    
+    nameInputs.forEach(input => {
+      const idx = parseInt(input.getAttribute("data-idx"));
+      playersData.push({
+        name: input.value.trim() || `Jugador ${idx + 1}`,
+        color: PLAYER_COLORS[idx]
+      });
+    });
+    
+    // Se guarda la configuración en el sessionStorage para que tablero.html la lea al cargar
+    sessionStorage.setItem("cineTriviaPlayers", JSON.stringify(playersData));
+    
+    // Se redirige a la pantalla del tablero
+    window.location.href = "tablero.html";
+  });
+}

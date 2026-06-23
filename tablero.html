@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CineTrivia — Tablero</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/bebas-neue@latest/latin-400-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-600-normal.css">
+<link rel="stylesheet" href="style.css" />
+<script src="preguntas.js"></script>
+</head>
+<body>
+
+<!-- ============== SETUP SCREEN ============== -->
+<section id="screen-setup" class="screen active">
+  <div class="setup-inner">
+    <div class="logo-row">
+      <div class="logo">CINE<span>TRIVIA</span></div>
+      <div class="subtitle">Edición Tablero</div>
+    </div>
+
+    <div class="card">
+      <h3>Número de jugadores</h3>
+      <div class="num-selector" id="num-selector">
+        <button class="num-btn" data-n="2">2</button>
+        <button class="num-btn active" data-n="3">3</button>
+        <button class="num-btn" data-n="4">4</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Nombres</h3>
+      <div class="player-inputs" id="player-inputs"></div>
+    </div>
+
+    <div class="card">
+      <h3>Categorías</h3>
+      <div class="cat-grid" id="cat-grid"></div>
+    </div>
+
+    <button class="btn-primary" id="btn-start">Empezar partida</button>
+
+    <div class="back-link-container">
+        <a href="index.html" class="back-link-text">← Volver al Menú Principal</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GAME SCREEN ============== -->
+<section id="screen-game" class="screen">
+  <div class="game-layout">
+    <div class="board-wrap">
+      <canvas id="board-canvas"></canvas>
+    </div>
+    <div class="side-panel">
+      <div class="turn-card">
+        <div class="turn-label">Turno de</div>
+        <div class="turn-name" id="turn-name">—</div>
+        <div class="turn-score" id="turn-score">0 pts</div>
+      </div>
+
+      <div class="dice-area">
+        <div class="dice" id="dice">🎲</div>
+        <button class="btn-roll" id="btn-roll">🎲 TIRAR DADO</button>
+        <button class="btn-continue hidden" id="btn-continue">Continuar →</button>
+      </div>
+
+      <div class="players-list">
+        <h4>Jugadores</h4>
+        <div id="players-list"></div>
+      </div>
+
+      <div style="text-align: right; margin-bottom: 10px;">
+        <a href="index.html" style="color: var(--text-muted); text-decoration: none; font-size: 14px;" onclick="return confirm('¿Seguro que quieres salir y perder el progreso de la partida?')">
+            ✕ Salir del juego
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== QUESTION MODAL ============== -->
+<div class="modal-overlay" id="modal-question">
+  <div class="modal">
+    <div class="q-cat" id="q-cat">Categoría</div>
+    <div class="q-text" id="q-text">Pregunta...</div>
+    <div class="opts-grid" id="opts-grid"></div>
+    <div class="feedback hidden" id="feedback">
+      <span id="fb-icon">✓</span>
+      <span id="fb-text"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============== WINNER SCREEN ============== -->
+<section id="screen-winner" class="screen">
+  <div class="winner-inner">
+    <div class="trophy">🏆</div>
+    <div class="winner-title">¡GANADOR!</div>
+    <div class="winner-name" id="winner-name">—</div>
+    <div class="winner-stats">
+      <div class="ws-item"><div class="ws-val" id="ws-score">0</div><div class="ws-lbl">Puntos</div></div>
+      <div class="ws-item"><div class="ws-val" id="ws-correct">0</div><div class="ws-lbl">Aciertos</div></div>
+      <div class="ws-item"><div class="ws-val" id="ws-wrong">0</div><div class="ws-lbl">Fallos</div></div>
+    </div>
+    <button class="btn-again" id="btn-again">Jugar de nuevo</button>
+    <div class="results-actions" style="margin-top: 30px; display: flex; gap: 10px;">
+        <button id="btn-again" class="btn-primary" style="flex: 1;">Jugar de nuevo</button>
+        <a href="index.html" class="btn-secondary" style="flex: 1; display: block; text-decoration: none; text-align: center; line-height: 50px; height: 50px; padding: 0;">
+            Menú Principal
+        </a>
+    </div>
+  </div>
+</section>
+
+<script type="module">
+// ============================================================
+//  CATEGORÍAS DEL TABLERO
+// ============================================================
+const CATEGORIES = [
+  { key: 'lat',    name: 'Latinoamérica',      color: '#27ae60' },
+  { key: 'nor',    name: 'Norteamérica',       color: '#3498db' },
+  { key: 'eur',    name: 'Europa',             color: '#c0392b' },
+  { key: 'afr',    name: 'África',             color: '#f1c40f' },
+  { key: 'asi',    name: 'Asia',               color: '#9b59b6' },
+  { key: 'pre',    name: 'Premios',            color: '#ffb0f6' },
+  { key: 'staff',  name: 'Staff',              color: '#ff7c30' },
+  { key: 'hist',   name: 'Historia y Teoría',  color: '#95a5a6' },
+];
+
+// Mapeo categoría del tablero → categoría de las preguntas
+const CAT_TO_PREG = {
+  lat:   ['Latinoamerica'],
+  nor:   ['Norteamerica'],
+  eur:   ['Europa'],
+  afr:   ['Africa'],
+  asi:   ['Asia'],
+  pre:   ['Premios'],
+  staff: ['Crew'],
+  hist:  ['Historia del Cine', 'Teoría del Cine'],
+};
+
+const PLAYER_COLORS = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12'];
+
+const QUESTIONS = PREGUNTAS;
+
+// ============================================================
+//  ESTADO DEL JUEGO
+// ============================================================
+const BOARD_SIZE = 64; // casillas en el tablero
+const FINISH_POINTS = 100; // puntos para ganar
+
+let state = {
+  numPlayers: 3,
+  players: [],            // { name, color, pos, score, correct, wrong }
+  currentIdx: 0,
+  selectedCats: new Set(CATEGORIES.map(c => c.key)),
+  phase: 'roll',          // 'roll' | 'question' | 'move' | 'endturn'
+  lastDice: 0,
+  usedQuestionIds: new Set(),
+};
+
+// ============================================================
+//  SETUP UI
+// ============================================================
+const numSelector = document.getElementById('num-selector');
+const playerInputs = document.getElementById('player-inputs');
+const catGrid = document.getElementById('cat-grid');
+const btnStart = document.getElementById('btn-start');
+
+function renderPlayerInputs() {
+  const n = state.numPlayers;
+  playerInputs.innerHTML = '';
+  for (let i = 0; i < n; i++) {
+    const row = document.createElement('div');
+    row.className = 'player-row';
+    row.innerHTML = `
+      <div class="player-dot" style="background:${PLAYER_COLORS[i]}"></div>
+      <input type="text" placeholder="Jugador ${i+1}" data-idx="${i}" maxlength="16" />
+    `;
+    playerInputs.appendChild(row);
+  }
+  playerInputs.querySelectorAll('input').forEach(inp => {
+    inp.addEventListener('input', validateSetup);
+  });
+}
+
+function renderCategories() {
+  catGrid.innerHTML = '';
+  CATEGORIES.forEach(cat => {
+    const chip = document.createElement('label');
+    chip.className = 'cat-chip active';
+    chip.innerHTML = `
+      <input type="checkbox" value="${cat.key}" checked />
+      <span class="dot" style="background:${cat.color}"></span>
+      <span>${cat.name}</span>
+    `;
+    chip.addEventListener('click', (e) => {
+      e.preventDefault();
+      const cb = chip.querySelector('input');
+      cb.checked = !cb.checked;
+      chip.classList.toggle('active', cb.checked);
+      if (cb.checked) state.selectedCats.add(cat.key);
+      else state.selectedCats.delete(cat.key);
+      validateSetup();
+    });
+    catGrid.appendChild(chip);
+  });
+}
+
+function validateSetup() {
+  const inputs = playerInputs.querySelectorAll('input');
+  const allFilled = [...inputs].every(inp => inp.value.trim().length >= 2);
+  const catsOk = state.selectedCats.size >= 2;
+  btnStart.disabled = !(allFilled && catsOk);
+}
+
+numSelector.querySelectorAll('.num-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    numSelector.querySelectorAll('.num-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state.numPlayers = parseInt(btn.dataset.n);
+    renderPlayerInputs();
+    validateSetup();
+  });
+});
+
+btnStart.addEventListener('click', startGame);
+
+function startGame() {
+  const inputs = playerInputs.querySelectorAll('input');
+  state.players = [...inputs].map((inp, i) => ({
+    name: inp.value.trim(),
+    color: PLAYER_COLORS[i],
+    pos: 0,
+    score: 0,
+    correct: 0,
+    wrong: 0,
+  }));
+  state.currentIdx = 0;
+  state.phase = 'roll';
+  state.usedQuestionIds = new Set();
+
+  document.getElementById('screen-setup').classList.remove('active');
+  document.getElementById('screen-game').classList.add('active');
+
+  renderPlayersList();
+  updateTurnUI();
+  initCanvas();
+}
+
+// ============================================================
+//  TABLERO (CANVAS)
+// ============================================================
+const canvas = document.getElementById('board-canvas');
+const ctx = canvas.getContext('2d');
+let boardCells = []; // { x, y, w, h, catKey, cx, cy }
+let canvasW = 0, canvasH = 0;
+
+function initCanvas() {
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+  new ResizeObserver(resizeCanvas).observe(canvas.parentElement);
+}
+
+function resizeCanvas() {
+  const parent = canvas.parentElement;
+  const rect = parent.getBoundingClientRect();
+  const size = Math.floor(Math.min(rect.width - 32, rect.height - 32));
+  if (size <= 0) return;
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = size * dpr;
+  canvas.height = size * dpr;
+  canvas.style.width = size + 'px';
+  canvas.style.height = size + 'px';
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  canvasW = size;
+  canvasH = size;
+  buildBoardLayout();
+  drawBoard();
+}
+
+// Distribuye BOARD_SIZE casillas en patrón serpenteante
+function buildBoardLayout() {
+  boardCells = [];
+  const cols = 8;
+  const rows = Math.ceil(BOARD_SIZE / cols);
+  const padding = 12;
+  const gap = 6;
+  const availW = canvasW - padding * 2;
+  const availH = canvasH - padding * 2;
+  const cellW = (availW - gap * (cols - 1)) / cols;
+  const cellH = (availH - gap * (rows - 1)) / rows;
+  const cellSize = Math.min(cellW, cellH);
+
+  const totalW = cellSize * cols + gap * (cols - 1);
+  const totalH = cellSize * rows + gap * (rows - 1);
+  const offsetX = (canvasW - totalW) / 2;
+  const offsetY = (canvasH - totalH) / 2;
+
+  // Se generan las posiciones formato serpiente
+  const positions = [];
+  for (let r = 0; r < rows; r++) {
+    const leftToRight = r % 2 === 0;
+    for (let c = 0; c < cols; c++) {
+      const cc = leftToRight ? c : (cols - 1 - c);
+      const x = offsetX + cc * (cellSize + gap);
+      const y = offsetY + r * (cellSize + gap);
+      positions.push({ x, y });
+      if (positions.length >= BOARD_SIZE) break;
+    }
+    if (positions.length >= BOARD_SIZE) break;
+  }
+
+  // Asignamos categorías de forma determinista pero variada
+  const catKeys = [...state.selectedCats];
+  if (catKeys.length === 0) catKeys.push('pre');
+
+  positions.forEach((p, i) => {
+    // 'p.num' (el número real de casilla del 1 al 64) en lugar de 'i' (el orden visual).
+    // Se resta 1 para que el residuo (%) funcione correctamente con el índice cero del array.
+    const numeroCasilla = p.num || (i + 1); 
+    const catKey = catKeys[(numeroCasilla - 1) % catKeys.length];
+    
+    const cat = CATEGORIES.find(c => c.key === catKey) || CATEGORIES[0];
+    boardCells.push({
+      x: p.x, y: p.y,
+      w: cellSize, h: cellSize,
+      cx: p.x + cellSize / 2,
+      cy: p.y + cellSize / 2,
+      catKey,
+      color: cat.color,
+      name: cat.name,
+      index: i,
+    });
+  });
+}
+
+function drawBoard() {
+  // Fondo
+  ctx.fillStyle = '#0d0d0d';
+  ctx.fillRect(0, 0, canvasW, canvasH);
+
+  // Líneas conectoras entre casillas
+  ctx.strokeStyle = '#2a2a2a';
+  ctx.lineWidth = 2;
+  for (let i = 0; i < boardCells.length - 1; i++) {
+    const a = boardCells[i];
+    const b = boardCells[i + 1];
+    ctx.beginPath();
+    ctx.moveTo(a.cx, a.cy);
+    ctx.lineTo(b.cx, b.cy);
+    ctx.stroke();
+  }
+
+  // Casillas
+  boardCells.forEach((cell, i) => {
+    const isStart = i === 0;
+    const isFinish = i === boardCells.length - 1;
+
+    // Sombra
+    ctx.fillStyle = 'rgba(0,0,0,0.4)';
+    roundRect(ctx, cell.x + 2, cell.y + 2, cell.w, cell.h, 8, true, false);
+
+    // Cuerpo
+    ctx.fillStyle = cell.color;
+    roundRect(ctx, cell.x, cell.y, cell.w, cell.h, 8, true, false);
+
+    // Borde interior
+    ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+    ctx.lineWidth = 1;
+    roundRect(ctx, cell.x + 1, cell.y + 1, cell.w - 2, cell.h - 2, 7, false, true);
+
+    // Número
+    const numSize = Math.max(9, cell.w * 0.22);
+    ctx.fillStyle = 'rgba(0,0,0,0.55)';
+    ctx.font = `600 ${numSize}px Inter, sans-serif`;
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'top';
+    ctx.fillText(String(i + 1), cell.x + 5, cell.y + 4);
+
+    // Etiqueta especial inicio/fin
+    if (isStart || isFinish) {
+      const label = isStart ? 'START' : 'FIN';
+      const labelSize = Math.max(8, cell.w * 0.18);
+      ctx.fillStyle = '#000';
+      ctx.font = `700 ${labelSize}px 'Bebas Neue', sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(label, cell.cx, cell.cy);
+    }
+  });
+
+  // Fichas de jugadores
+  drawPlayers();
+}
+
+function drawPlayers() {
+  // Se agrupan jugadores por casilla para apilarlos
+  const byCell = {};
+  state.players.forEach((p, i) => {
+    if (!byCell[p.pos]) byCell[p.pos] = [];
+    byCell[p.pos].push({ player: p, idx: i });
+  });
+
+  Object.entries(byCell).forEach(([posStr, list]) => {
+    const pos = parseInt(posStr);
+    const cell = boardCells[pos];
+    if (!cell) return;
+    const n = list.length;
+    const maxR = Math.max(4, cell.w * 0.16);
+    const radius = Math.min(maxR, (cell.w * 0.4) / Math.sqrt(n));
+    // Asegurar radio positivo
+    const safeRadius = Math.max(2, radius);
+
+    list.forEach((item, k) => {
+      const angle = (k / n) * Math.PI * 2 - Math.PI / 2;
+      const offsetR = n === 1 ? 0 : cell.w * 0.18;
+      const px = cell.cx + Math.cos(angle) * offsetR;
+      const py = cell.cy + Math.sin(angle) * offsetR;
+
+      // Sombra
+      ctx.beginPath();
+      ctx.arc(px + 1, py + 2, safeRadius, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(0,0,0,0.5)';
+      ctx.fill();
+
+      // Ficha
+      ctx.beginPath();
+      ctx.arc(px, py, safeRadius, 0, Math.PI * 2);
+      ctx.fillStyle = item.player.color;
+      ctx.fill();
+
+      // Borde
+      ctx.strokeStyle = '#fff';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      // Letra inicial
+      const fontSize = Math.max(7, safeRadius * 1.1);
+      ctx.fillStyle = '#fff';
+      ctx.font = `700 ${fontSize}px Inter, sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(item.player.name[0].toUpperCase(), px, py + 0.5);
+    });
+  });
+}
+
+function roundRect(ctx, x, y, w, h, r, fill, stroke) {
+  // Protección contra radios negativos
+  const safeR = Math.max(0, Math.min(r, Math.min(w, h) / 2));
+  ctx.beginPath();
+  ctx.moveTo(x + safeR, y);
+  ctx.arcTo(x + w, y, x + w, y + h, safeR);
+  ctx.arcTo(x + w, y + h, x, y + h, safeR);
+  ctx.arcTo(x, y + h, x, y, safeR);
+  ctx.arcTo(x, y, x + w, y, safeR);
+  ctx.closePath();
+  if (fill) ctx.fill();
+  if (stroke) ctx.stroke();
+}
+
+// ============================================================
+//  JUGADORES UI
+// ============================================================
+function renderPlayersList() {
+  const list = document.getElementById('players-list');
+  list.innerHTML = '';
+  state.players.forEach((p, i) => {
+    const row = document.createElement('div');
+    row.className = 'pl-row' + (i === state.currentIdx ? ' current' : '');
+    row.innerHTML = `
+      <div class="pl-dot" style="background:${p.color}"></div>
+      <div class="pl-name">${escapeHtml(p.name)}</div>
+      <div class="pl-pos">Casilla ${p.pos + 1}</div>
+      <div class="pl-score">${p.score} pts</div>
+    `;
+    list.appendChild(row);
+  });
+}
+
+function updateTurnUI() {
+  const p = state.players[state.currentIdx];
+  document.getElementById('turn-name').textContent = p.name;
+  document.getElementById('turn-name').style.color = p.color;
+  document.getElementById('turn-score').textContent = `${p.score} pts · ${p.pos + 1}/${BOARD_SIZE}`;
+}
+
+function escapeHtml(str) {
+  return str.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// ============================================================
+//  DADO Y TURNOS
+// ============================================================
+const diceEl = document.getElementById('dice');
+const btnRoll = document.getElementById('btn-roll');
+const btnContinue = document.getElementById('btn-continue');
+
+btnRoll.addEventListener('click', rollDice);
+btnContinue.addEventListener('click', endTurn);
+
+function rollDice() {
+  if (state.phase !== 'roll') return;
+  btnRoll.disabled = true;
+  diceEl.classList.add('rolling');
+
+  let ticks = 0;
+  const maxTicks = 10;
+  const interval = setInterval(() => {
+    diceEl.textContent = Math.floor(Math.random() * 6) + 1;
+    ticks++;
+    if (ticks >= maxTicks) {
+      clearInterval(interval);
+      const result = Math.floor(Math.random() * 6) + 1;
+      state.lastDice = result;
+      diceEl.textContent = result;
+      diceEl.classList.remove('rolling');
+      state.phase = 'question';
+      askQuestion();
+    }
+  }, 70);
+}
+
+// ============================================================
+//  PREGUNTAS
+// ============================================================
+const modalQ = document.getElementById('modal-question');
+const qCatEl = document.getElementById('q-cat');
+const qTextEl = document.getElementById('q-text');
+const optsGrid = document.getElementById('opts-grid');
+const feedback = document.getElementById('feedback');
+const fbIcon = document.getElementById('fb-icon');
+const fbText = document.getElementById('fb-text');
+
+function getQuestionForCell(cellIndex) {
+  const cell = boardCells[cellIndex];
+  const allowedCats = CAT_TO_PREG[cell.catKey] || ['Películas']; //!!!!
+  const pool = PREGUNTAS.filter(p =>
+    allowedCats.includes(p.categoria) && !state.usedQuestionIds.has(p.id)
+  );
+  const source = pool.length > 0 ? pool : PREGUNTAS.filter(p => !state.usedQuestionIds.has(p.id));
+  const finalSource = source.length > 0 ? source : PREGUNTAS;
+  const q = finalSource[Math.floor(Math.random() * finalSource.length)];
+  state.usedQuestionIds.add(q.id);
+  if (state.usedQuestionIds.size > PREGUNTAS.length * 0.7) {
+    state.usedQuestionIds.clear();
+  }
+  return { question: q, catKey: cell.catKey };
+}
+
+function askQuestion() {
+  const cellIdx = Math.min(state.players[state.currentIdx].pos + state.lastDice, BOARD_SIZE - 1);
+  const { question, catKey } = getQuestionForCell(cellIdx);
+  const cat = CATEGORIES.find(c => c.key === catKey) || CATEGORIES[0];
+
+  qCatEl.textContent = cat.name;
+  qCatEl.style.background = cat.color + '22';
+  qCatEl.style.color = cat.color;
+  qCatEl.style.border = `1px solid ${cat.color}`;
+  qTextEl.textContent = question.pregunta;
+
+  optsGrid.innerHTML = '';
+  feedback.classList.add('hidden');
+
+  question.opciones.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'opt-btn';
+    btn.textContent = opt;
+    btn.addEventListener('click', () => handleAnswer(i, question));
+    optsGrid.appendChild(btn);
+  });
+
+  modalQ.classList.add('active');
+}
+
+function handleAnswer(selected, question) {
+  const buttons = optsGrid.querySelectorAll('.opt-btn');
+  buttons.forEach((b, i) => {
+    b.disabled = true;
+    if (i === question.correcta) b.classList.add('correct');
+    if (i === selected && i !== question.correcta) b.classList.add('wrong');
+  });
+
+  const correct = selected === question.correcta;
+  const p = state.players[state.currentIdx];
+
+  if (correct) {
+    p.score += 5;
+    p.correct += 1;
+    feedback.className = 'feedback correct';
+    fbIcon.textContent = '✓';
+    fbText.textContent = '¡Correcto! +5 pts';
+  } else {
+    p.score = Math.max(0, p.score - 3);
+    p.wrong += 1;
+    feedback.className = 'feedback wrong';
+    fbIcon.textContent = '✗';
+    fbText.textContent = `La respuesta era: ${question.opciones[question.correcta]}`;
+  }
+
+  state.phase = 'move';
+  setTimeout(() => {
+    modalQ.classList.remove('active');
+    if (correct) {
+        movePlayer();  // solo avanza si acertó
+    } else {
+        // Se queda en la casilla, pasa al siguiente turno
+        state.phase = 'endturn';
+        btnContinue.classList.remove('hidden');
+        renderPlayersList();
+        updateTurnUI();
+        drawBoard();
+    }
+  }, 1600);
+}
+
+function movePlayer() {
+  const p = state.players[state.currentIdx];
+  const target = Math.min(p.pos + state.lastDice, BOARD_SIZE - 1);
+  animateMove(p, target, () => {
+    if (p.pos >= BOARD_SIZE - 1) {
+      endGame();
+    } else {
+      state.phase = 'endturn';
+      btnContinue.classList.remove('hidden');
+    }
+    renderPlayersList();
+    updateTurnUI();
+    drawBoard();
+  });
+}
+
+function animateMove(player, target, done) {
+  const steps = target - player.pos;
+  if (steps <= 0) { done(); return; }
+  let i = 0;
+  const step = () => {
+    player.pos++;
+    drawBoard();
+    i++;
+    if (i >= steps) done();
+    else setTimeout(step, 180);
+  };
+  step();
+}
+
+function endTurn() {
+  btnContinue.classList.add('hidden');
+  state.currentIdx = (state.currentIdx + 1) % state.players.length;
+  state.phase = 'roll';
+  btnRoll.disabled = false;
+  updateTurnUI();
+  renderPlayersList();
+}
+
+// ============================================================
+//  FIN DEL JUEGO
+// ============================================================
+function endGame() {
+  const winner = [...state.players].sort((a, b) => b.score - a.score)[0];
+  document.getElementById('screen-game').classList.remove('active');
+  document.getElementById('screen-winner').classList.add('active');
+  document.getElementById('winner-name').textContent = winner.name;
+  document.getElementById('winner-name').style.color = winner.color;
+  document.getElementById('ws-score').textContent = winner.score;
+  document.getElementById('ws-correct').textContent = winner.correct;
+  document.getElementById('ws-wrong').textContent = winner.wrong;
+}
+
+document.getElementById('btn-again').addEventListener('click', () => {
+  document.getElementById('screen-winner').classList.remove('active');
+  document.getElementById('screen-setup').classList.add('active');
+});
+
+// ============================================================
+//  INIT
+// ============================================================
+renderPlayerInputs();
+renderCategories();
+validateSetup();
+</script>
+</body>
+</html>
+
