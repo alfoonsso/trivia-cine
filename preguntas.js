@@ -8,7 +8,6 @@
 //    opciones  → array de 4 respuestas
 //    correcta  → índice (0-3) de la respuesta correcta
 //    categoria → etiqueta visible 
-//    dificultad → "facil" | "media" | "dificil"
 // ============================================================
 
 const PREGUNTAS = [
@@ -173,7 +172,7 @@ const PREGUNTAS = [
   { id: 159, pregunta: "¿Qué película de Bi Gan tiene un plano secuencia de más de una hora?", opciones: ["South","Kaili Blues","Long Day's Journey Into Night","Resurrection"], correcta: 2, categoria: "Asia" },
   { id: 160, pregunta: "¿Con qué película francesa debutó Alain Delon?", opciones: ["Purple Noon","Rocco and His Brothers","When a Woman Meddles","The Big Risk"], correcta: 2, categoria: "Europa" },
   { id: 161, pregunta: "¿En qué película de Gaspar Noé la historia transcurre en orden inverso?", opciones: ["Enter the Void","Love","Irréversible","Climax"], correcta: 2, categoria: "Europa" },
-  { id: 162, pregunta: "¿Con qué película ganó Pialat la Palma de Oro en 1987?", opciones: ["À nos amours","Police","Under the Sun of Satan","Van Gogh"], correcta: 2, categoria: "Premios" },
+  { id: 162, pregunta: "¿Con qué película ganó Maurice Pialat la Palma de Oro en 1987?", opciones: ["À nos amours","Police","Under the Sun of Satan","Van Gogh"], correcta: 2, categoria: "Premios" },
   { id: 163, pregunta: "¿Con qué director estuvo Anna Karina casada?", opciones: ["François Truffaut","Jean-Luc Godard","Jacques Rivette","Éric Rohmer"], correcta: 1, categoria: "Europa" },
   { id: 164, pregunta: "¿Qué actor italiano protagonizó 'Django' (1966)?", opciones: ["Giuliano Gemma","Franco Nero","Gian Maria Volonté","Lee Van Cleef"], correcta: 1, categoria: "Europa" },
   { id: 165, pregunta: "¿Qué película de Cristi Puiu ganó 'Un Certain Regard' en Cannes?", opciones: ["Aurora","Sieranevada","The Death of Mr. Lazarescu","Malmkrog"], correcta: 2, categoria: "Premios" },
@@ -181,7 +180,7 @@ const PREGUNTAS = [
   { id: 167, pregunta: "¿Cómo se llama el método de montaje que Vertov denominó 'intervalo'?", opciones: ["Montaje de atracciones","Cine-ojo","Montaje de intervalos","Montaje intelectual"], correcta: 2, categoria: "Teoría del Cine" },
   { id: 168, pregunta: "¿Qué película de David Lynch ganó la Palma de Oro?", opciones: ["The Elephant Man","Blue Velvet","Wild at Heart","Lost Highway"], correcta: 2, categoria: "Premios" },
   { id: 169, pregunta: "¿Qué actriz protagoniza 'Mulholland Drive' (2001)?", opciones: ["Laura Dern","Patricia Arquette","Naomi Watts","Isabella Rossellini"], correcta: 2, categoria: "Norteamerica" },
-  { id: 170, pregunta: "¿Qué canción suena en el Club Silencio en 'Mulholland Drive'?", opciones: ["In Dreams","Crying","Llorando de Rebekah Del Rio","Blue Velvet"], correcta: 2, categoria: "Crew" },
+  { id: 170, pregunta: "¿Qué canción suena en el Club Silencio en 'Mulholland Drive'?", opciones: ["In Dreams","Crying","Llorando","Blue Velvet"], correcta: 2, categoria: "Crew" },
   { id: 171, pregunta: "¿En cuántas películas de Kurosawa trabajó Toshiro Mifune?", opciones: ["10","14","16","18"], correcta: 3, categoria: "Asia" },
   { id: 172, pregunta: "¿Con qué director japonés trabajó Wakao Ayako?", opciones: ["Yasujiro Ozu","Mikio Naruse","Kenji Mizoguchi","Kon Ichikawa"], correcta: 3, categoria: "Asia" },
   { id: 173, pregunta: "¿En qué película de Fellini Mastroianni es un escritor en crisis creativa?", opciones: ["La Dolce Vita","City of Women","8½","Amarcord"], correcta: 2, categoria: "Europa" },
