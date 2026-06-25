@@ -258,7 +258,7 @@ const PREGUNTAS = [
   { id: 245, pregunta: "¿Qué película de los Coen transcurre en Minnesota?", opciones: ["Blood Simple","Miller's Crossing","Fargo","A Serious Man"], correcta: 2, categoria: "Norteamerica" },
   { id: 246, pregunta: "¿Quién dirigió 'A Separation' (2011)?", opciones: ["Jafar Panahi","Asghar Farhadi","Majid Majidi","Abbas Kiarostami"], correcta: 1, categoria: "Asia" },
   { id: 247, pregunta: "¿Qué actriz protagoniza 'Jeanne Dielman' (1975)?", opciones: ["Delphine Seyrig","Jeanne Moreau","Bulle Ogier","Anna Karina"], correcta: 0, categoria: "Europa" },
-  { id: 248, pregunta: "¿Qué película de Michael Mann narra el enfrentamiento detective/ladrón en LA?", opciones: ["Collateral","Miami Vice","Thief","Heat"], correcta: 3, categoria: "Norteamerica" },
+  { id: 248, pregunta: "¿Qué película de Michael Mann narra el enfrentamiento detective-ladrón en L.A?", opciones: ["Collateral","Miami Vice","Thief","Heat"], correcta: 3, categoria: "Norteamerica" },
   { id: 249, pregunta: "¿Qué actor interpreta a Harry Lime en 'The Third Man'?", opciones: ["Trevor Howard","Joseph Cotten","Orson Welles","James Mason"], correcta: 2, categoria: "Europa" },
   { id: 250, pregunta: "¿Quién realizó 'The Travelling Players' (1975)?", opciones: ["Theo Angelopoulos","Constantin Costa-Gavras","Michael Cacoyannis","Yorgos Lanthimos"], correcta: 0, categoria: "Europa" },
   { id: 251, pregunta: "¿Qué actriz interpreta a Lola Lola en 'The Blue Angel' (1930)?", opciones: ["Brigitte Helm","Marlene Dietrich","Lotte Lenya","Hildegard Knef"], correcta: 1, categoria: "Europa" },
@@ -278,7 +278,7 @@ const PREGUNTAS = [
   { id: 265, pregunta: "¿Quién dirigió 'Touki Bouki' (1973)?", opciones: ["Souleymane Cissé","Djibril Diop Mambéty","Ousmane Sembène","Abderrahmane Sissako"], correcta: 1, categoria: "Africa" },
   { id: 266, pregunta: "¿Quién dirigió 'The Bitter Tears of Petra von Kant' (1972)?", opciones: ["Werner Schroeter","Rainer Werner Fassbinder","Volker Schlöndorff","Ulrike Ottinger"], correcta: 1, categoria: "Europa" },
   { id: 267, pregunta: "¿Qué compositor creó la banda sonora de '1900' (1976)?", opciones: ["Nino Rota","Ennio Morricone","Piero Piccioni","Luis Bacalov"], correcta: 1, categoria: "Crew" },
-  { id: 268, pregunta: "¿Qué director ganó el Oso de Oro con 'Alcarràs' (2022)?", opciones: ["Isabel Coixet","Carla Simón","Icíar Bollaín","Pilar Palomero"], correcta: 1, categoria: "Premios" },
+  { id: 268, pregunta: "¿Qué directora ganó el Oso de Oro con 'Alcarràs' (2022)?", opciones: ["Isabel Coixet","Carla Simón","Icíar Bollaín","Pilar Palomero"], correcta: 1, categoria: "Premios" },
   { id: 269, pregunta: "¿Quién dirigió 'The Mirror' (1975)?", opciones: ["Andrei Tarkovsky","Sergei Parajanov","Aleksandr Sokurov","Elem Klimov"], correcta: 0, categoria: "Europa" },
   { id: 270, pregunta: "¿Quién dirigió 'The Decameron' (1971)?", opciones: ["Pier Paolo Pasolini","Luchino Visconti","Michelangelo Antonioni","Bernardo Bertolucci"], correcta: 0, categoria: "Europa" },
   { id: 271, pregunta: "¿Qué banda sonora es obra de Angelo Badalamenti?", opciones: ["Blue Velvet","The Last Emperor","Mississippi Burning","Cinema Paradiso"], correcta: 0, categoria: "Crew" },
@@ -423,7 +423,7 @@ const PREGUNTAS = [
   { id: 410, pregunta: "¿Qué director y guionista estadounidense es considerado el maestro de la 'screwball comedy' de los años 40 gracias a obras como 'The Lady Eve' y 'Sullivan's Travels'?", opciones: ["Preston Sturges", "John Sturges", "Howard Hawks", "Leo McCarey"], correcta: 0, categoria: "Norteamerica"},
   { id: 411, pregunta: "¿Qué compositor firmó la banda sonora de 'Signs' (2002), construyendo la tensión con un leitmotiv principal de apenas tres notas?", opciones: ["Danny Elfman", "James Newton Howard", "Hans Zimmer", "John Williams"], correcta: 1, categoria: "Crew"},
   { id: 412, pregunta: "¿En qué consiste la técnica cinematográfica conocida como plano holandés?", opciones: ["En inclinar la cámara respecto a la línea del horizonte para generar inestabilidad o tensión", "En realizar un travelling de avance mientras se aplica un zoom de retroceso simultáneo sobre el sujeto", "En situar la cámara a la altura del suelo apuntando directamente hacia el cielo en un ángulo vertical", "En mantener un encuadre fijo durante más de cinco minutos sin realizar ningún tipo de corte"], correcta: 0, categoria: "Teoría del Cine"}
-  
+
 ];
 
 
