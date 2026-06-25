@@ -620,7 +620,7 @@ function movePlayer() {
   const target = Math.min(p.pos + state.lastDice, BOARD_SIZE - 1);
   animateMove(p, target, () => {
     if (p.pos >= BOARD_SIZE - 1) {
-      endGame();
+      endGame(p);
     } else {
       state.phase = 'endturn';
       btnContinue.classList.remove('hidden');
@@ -657,8 +657,7 @@ function endTurn() {
 // ============================================================
 //  FIN DEL JUEGO
 // ============================================================
-function endGame() {
-  const winner = [...state.players].sort((a, b) => b.score - a.score)[0];
+function endGame(winner) {
   document.getElementById('screen-game').classList.remove('active');
   document.getElementById('screen-winner').classList.add('active');
   document.getElementById('winner-name').textContent = winner.name;
